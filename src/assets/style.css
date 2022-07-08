@@ -1,0 +1,43 @@
+:root{
+    --general-background-color:#333;
+    --calculator-dark-color:#fff;
+    --calculator-width:300px;
+    --calculator-height:400px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: consoles,"Courier New", monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--general-background-color);
+}
+
+.calculator{
+    position: relative;
+    min-height: var(--calculator-height);
+    min-width: var(--calculator-width);
+    /* note background 可以使color 也可以不shicolor */
+    background: var(--general-background-color);
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    /* note boxshadow: x轴，y轴，模糊度*/
+    /* note: 如何做立体效果 */
+    box-shadow: 
+    25px 25px 75px rgba(0,0,0,0.25),
+     10px 10px 70px rgba(0,0,0,0.25),
+     /* note inset 添加内置阴影，用来展示凹陷效果 */
+     inset -5px -5px 15px rgba(0,0,0,1),
+     inset 5px 5px 15px rgba(0,0,0,0.5);
+    
+}
+.calculator span {
+    color: var(--calculator-dark-color);
+}
